@@ -1,0 +1,97 @@
+---
+# This doesn't get used for the title slide...keep scroling!
+title: "Presentation"
+output:
+  xaringan::moon_reader:
+    seal: false
+    df_print: paged
+    lib_dir: libs
+    css:
+    - default
+    - assets/theme.css
+    - assets/theme-xaringan.css
+    - presentation.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: ["theme-xaringan-title-slide", "center", "middle"]
+---
+class: theme-xaringan-title-slide, center, middle
+
+```{r setup, include=FALSE}
+# library(stuff)
+
+knitr::opts_chunk$set(
+  dpi = 200,
+  fig.height = 4,
+  echo = FALSE
+)
+
+# this just has to be here for xaringan to work
+options(htmltools.dir.version = FALSE)
+```
+
+<!-- this is actually the title slide --->
+
+# Presentation Title
+
+### Presentation Author
+
+### `r Sys.Date()`
+
+<!-- this is how you get the parliament hill blue thing on your slide  --->
+.landscape[
+
+]
+
+---
+
+# Slide and content
+
+Here is some content and a plot
+
+```{r, echo=FALSE}
+hist(faithful$waiting)
+```
+
+
+.footnote[
+No geysers were harmed in the making of this slide.
+]
+
+---
+
+# Slide with left/right cols
+
+.pull-left[
+
+- Point one
+- Point two
+- Point three
+- Point four
+
+]
+
+.pull-right[
+
+You can put RMarkdown content here too:
+
+```{r, echo=TRUE, fig.width=4, fig.height=4}
+plot(1:5)
+```
+
+]
+
+---
+class: inverse, center, middle
+
+# Section header slide
+
+---
+
+# Questions?
+
+.landscape[
+
+]
